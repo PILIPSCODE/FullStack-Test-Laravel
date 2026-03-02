@@ -78,7 +78,23 @@ Agar foto pegawai yang diupload dapat diakses publik:
 php artisan storage:link
 ```
 
-### 8. Install Dependensi Node.js (Opsional)
+### 8. Jalankan Seeder Data Dummy
+
+Isi database dengan data pegawai contoh (10 data tetap + 20 data acak):
+
+```bash
+php artisan db:seed --class=PegawaiSeeder
+```
+
+Atau jalankan semua seeder sekaligus:
+
+```bash
+php artisan db:seed
+```
+
+> **Aman dijalankan berkali-kali** — menggunakan `firstOrCreate` sehingga tidak akan membuat data duplikat.
+
+### 9. Install Dependensi Node.js (Opsional)
 
 Hanya diperlukan jika Anda ingin mengembangkan aset front-end:
 
